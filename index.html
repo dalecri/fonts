@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonts — Cristobal D'Alessio</title>
+<meta name="description" content="The type shelf: every font in use across Cristobal's vault, homepage, Dalenzo, and games, with live previews and downloads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Figtree:wght@400;600;700&family=Archivo:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=VT323&family=Space+Grotesk:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:"Alpha Lyrae";src:url("assets/fonts/AlphaLyrae-Medium.woff2") format("woff2"),url("assets/fonts/AlphaLyrae-Medium.woff") format("woff");font-weight:400 700;font-display:swap}
+  @font-face{font-family:"Cris Handwritten";src:url("assets/fonts/CrisHandwritten-Regular.ttf") format("truetype");font-display:swap}
+  :root{
+    --bg:#1E1826; --panel:#2A2233; --panel2:#241C2E; --line:#3A2F47;
+    --ink:#EDE7F2; --muted:#9B8FA8; --faint:#6E6182;
+    --amber:#E8873A; --pink:#E85C8A; --blue:#7FB8D9; --gold:#F2C94C; --mint:#72EFDD; --violet:#B79CED;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--amber); color:#1E1826}
+  a{color:inherit}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 20px 64px}
+
+  header{padding:56px 0 8px; text-align:center}
+  .banner{
+    margin:0 auto 18px; display:inline-block; text-align:left;
+    color:var(--faint); font-size:11px; line-height:1.35; white-space:pre;
+    user-select:none;
+  }
+  .banner .w{color:var(--blue)} .banner .k{color:var(--amber)} .banner .l{color:#8FAE7C}
+  h1{font-family:"Alpha Lyrae","Space Mono",monospace; font-size:clamp(28px,5vw,44px); font-weight:700; letter-spacing:-0.01em; margin:0 0 10px}
+  h1 .dot{color:var(--amber)}
+  .lede{color:var(--muted); max-width:620px; margin:0 auto; font-size:15px}
+  .meta{margin-top:14px; color:var(--faint); font-size:12px; letter-spacing:0.14em; text-transform:uppercase}
+  .meta b{color:var(--gold); font-weight:400}
+
+  #wave{
+    display:block; margin:26px auto 4px; max-width:760px; width:100%;
+    white-space:pre; overflow:hidden; text-align:center;
+    color:#3E6B8C; font-size:12px; line-height:1.2; user-select:none;
+  }
+
+  .trybar{display:flex; justify-content:center; margin:20px 0 4px}
+  .trybar input{
+    width:min(460px, 90%); background:var(--panel2); border:1px solid var(--line); border-radius:999px;
+    color:var(--ink); font-family:inherit; font-size:14px; padding:9px 18px; text-align:center; outline:none;
+  }
+  .trybar input:focus{border-color:var(--amber)}
+
+  section{margin-top:44px}
+  .sec-head{display:flex; align-items:baseline; gap:12px; margin:0 2px 16px}
+  .sec-head h2{font-family:"Alpha Lyrae","Space Mono",monospace; font-size:19px; margin:0; font-weight:700}
+  .sec-head .rule{flex:1; border-top:1px dashed var(--line); transform:translateY(-4px)}
+  .sec-head .count{color:var(--faint); font-size:12px}
+  .acc-main{color:var(--gold)} .acc-also{color:var(--violet)}
+
+  .grid{display:grid; grid-template-columns:1fr; gap:14px}
+  @media (min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  @media (min-width:1024px){.grid{grid-template-columns:1fr 1fr 1fr}}
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    padding:18px 18px 14px; display:flex; flex-direction:column; gap:8px;
+    transition:border-color .15s, transform .15s;
+  }
+  .card:hover{border-color:var(--amber); transform:translateY(-2px)}
+  .card h3{font-family:"Alpha Lyrae","Space Mono",monospace; margin:0; font-size:16.5px; font-weight:700}
+  .pv{margin:0; color:var(--ink); overflow:hidden}
+  .pv.big{font-size:30px; line-height:1.25; white-space:nowrap; text-overflow:ellipsis}
+  .pv.small{font-size:13.5px; color:var(--muted); line-height:1.5}
+  .f-alpha{font-family:"Alpha Lyrae","Space Mono",monospace}
+  .f-hand{font-family:"Cris Handwritten","Space Mono",monospace}
+  .f-spacemono{font-family:"Space Mono",monospace}
+  .f-figtree{font-family:"Figtree",sans-serif}
+  .f-archivo{font-family:"Archivo",sans-serif}
+  .f-plex{font-family:"IBM Plex Mono",monospace}
+  .f-vt{font-family:"VT323",monospace}
+  .f-grotesk{font-family:"Space Grotesk",sans-serif}
+  .f-jakarta{font-family:"Plus Jakarta Sans",sans-serif}
+  .f-jetbrains{font-family:"JetBrains Mono",monospace}
+  .card .where{margin:0; color:var(--faint); font-size:12.5px}
+  .card .foot{display:flex; gap:14px; align-items:center; margin-top:auto; padding-top:6px; font-size:13px; flex-wrap:wrap}
+  .dl{
+    color:var(--amber); text-decoration:none; font-weight:700;
+    border:1px solid var(--line); border-radius:8px; padding:5px 12px; background:var(--panel2);
+  }
+  .dl:hover{border-color:var(--amber)}
+  .ext{color:var(--muted); text-decoration:none}
+  .ext:hover{color:var(--ink); text-decoration:underline}
+  .note{color:var(--faint); font-size:12.5px; margin:0}
+
+  footer{margin-top:56px; border-top:1px solid var(--line); padding-top:22px; color:var(--faint); font-size:13px}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--amber)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <pre class="banner" aria-hidden="true">   <span class="w">Aa</span>     <span class="k">Gg</span>      <span class="l">Rr</span>
+ <span class="w">e</span>   <span class="k">&amp;</span>   <span class="l">?</span>   <span class="w">0123456789</span></pre>
+    <h1>Fonts<span class="dot">.</span></h1>
+    <p class="lede">The type shelf for the whole estate: every font in use across the vault, the homepage, Dalenzo, itsrito, and the games. Type below to preview them all at once. Self-hosted files live in this repo, ready to download.</p>
+    <p class="meta"><b>11</b> families &nbsp;·&nbsp; <b>2</b> self-hosted &nbsp;·&nbsp; <b>1</b> handwriting original</p>
+    <pre id="wave" aria-hidden="true"></pre>
+    <div class="trybar"><input id="try" type="text" maxlength="42" placeholder="Type to preview — try “Rito &amp; the cats”" aria-label="Preview text"></div>
+  </header>
+
+  <section id="main">
+    <div class="sec-head"><h2 class="acc-main">In use</h2><span class="rule"></span><span class="count">8 families</span></div>
+    <div class="grid">
+      <article class="card">
+        <h3>Alpha Lyrae Medium</h3>
+        <p class="pv big f-alpha">Cris &amp; Tyler</p>
+        <p class="pv small f-alpha">The quick brown fox jumps over the lazy dog. 0123456789</p>
+        <p class="where">Display — the vault, homepage, every collection gallery, itsrito. SIL Open Font License 1.1.</p>
+        <div class="foot"><a class="dl" href="assets/fonts/AlphaLyrae-Medium.woff2" download>WOFF2</a><a class="dl" href="assets/fonts/AlphaLyrae-Medium.woff" download>WOFF</a><a class="ext" href="https://github.com/vegaprotocol/alpha-lyrae">Source</a></div>
+      </article>
+      <article class="card">
+        <h3>Cris Handwritten</h3>
+        <p class="pv big f-hand">Cris &amp; Tyler</p>
+        <p class="pv small f-hand">The quick brown fox jumps over the lazy dog. 0123456789</p>
+        <p class="where">Handwriting — Cris's own hand as a font, 83 glyphs, drawn for the notebook portfolio template. His own work.</p>
+        <div class="foot"><a class="dl" href="assets/fonts/CrisHandwritten-Regular.ttf" download>TTF</a><a class="dl" href="assets/fonts/CrisHandwritten-Regular.otf" download>OTF</a></div>
+      </article>
+      <article class="card">
+        <h3>Space Mono</h3>
+        <p class="pv big f-spacemono">Cris &amp; Tyler</p>
+        <p class="pv small f-spacemono">The quick brown fox jumps over the lazy dog. 0123456789</p>
+        <p class="where">UI &amp; body — the vault, galleries, and itsrito run on it. SIL Open Font License 1.1.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/Space+Mono">Get on Google Fonts</a></div>
+      </article>
+      <article class="card">
+        <h3>Figtree</h3>
+        <p class="pv big f-figtree">Cris &amp; Tyler</p>
+        <p class="pv small f-figtree">The quick brown fox jumps over the lazy dog. 0123456789</p>
+        <p class="where">Body text — the heycristobal.com homepage pairs it with Alpha Lyrae headings. SIL Open Font License 1.1.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/Figtree">Get on Google Fonts</a></div>
+      </article>
+      <article class="card">
+        <h3>Archivo</h3>
+        <p class="pv big f-archivo">Cris &amp; Tyler</p>
+        <p class="pv small f-archivo">The quick brown fox jumps over the lazy dog. 0123456789</p>
+        <p class="where">Display &amp; body — Dalenzo's Atelier Noir voice, variable width and weight. SIL Open Font License 1.1.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/Archivo">Get on Google Fonts</a></div>
+      </article>
+      <article class="card">
+        <h3>IBM Plex Mono</h3>
+        <p class="pv big f-plex">Cris &amp; Tyler</p>
+        <p class="pv small f-plex">The quick brown fox jumps over the lazy dog. 0123456789</p>
+        <p class="where">Mono accents — Dalenzo's spec labels and prices. SIL Open Font License 1.1.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/IBM+Plex+Mono">Get on Google Fonts</a></div>
+      </article>
+      <article class="card">
+        <h3>VT323</h3>
+        <p class="pv big f-vt">Cris &amp; Tyler</p>
+        <p class="pv small f-vt">The quick brown fox jumps over the lazy dog. 0123456789</p>
+        <p class="where">Pixel terminal — TIDE-AGE's DOS interface in the Fenmere. SIL Open Font License 1.1.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/VT323">Get on Google Fonts</a></div>
+      </article>
+      <article class="card">
+        <h3>Dosage</h3>
+        <p class="pv big f-vt">Cris &amp; Tyler</p>
+        <p class="where">Pixel display — MEK.type's DOS typeface, the named accent in the ASCII and roguelike prompts. CC0. Preview above is a stand-in (VT323); the real specimen lives on its download page.</p>
+        <div class="foot"><a class="dl" href="https://www.dafont.com/search.php?q=dosage">Get on DaFont</a><a class="ext" href="https://mektxt.com/works/dos-age-game">DOS-AGE</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="also">
+    <div class="sec-head"><h2 class="acc-also">Also in the library</h2><span class="rule"></span><span class="count">3 families</span></div>
+    <div class="grid">
+      <article class="card">
+        <h3>Space Grotesk</h3>
+        <p class="pv big f-grotesk">Cris &amp; Tyler</p>
+        <p class="where">Display — the Dynamic Portfolio template. Google Fonts, OFL.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/Space+Grotesk">Get on Google Fonts</a></div>
+      </article>
+      <article class="card">
+        <h3>Plus Jakarta Sans</h3>
+        <p class="pv big f-jakarta">Cris &amp; Tyler</p>
+        <p class="where">Body — the Dynamic Portfolio template. Google Fonts, OFL.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/Plus+Jakarta+Sans">Get on Google Fonts</a></div>
+      </article>
+      <article class="card">
+        <h3>JetBrains Mono</h3>
+        <p class="pv big f-jetbrains">Cris &amp; Tyler</p>
+        <p class="where">Mono — the Dynamic Portfolio template. Google Fonts, OFL.</p>
+        <div class="foot"><a class="dl" href="https://fonts.google.com/specimen/JetBrains+Mono">Get on Google Fonts</a></div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <p>Fonts. — one shelf for the type behind <a href="https://heycristobal.com/vault/">the vault</a>, <a href="https://heycristobal.com/">heycristobal.com</a>, <a href="https://heycristobal.com/dalenzo/">Dalenzo</a>, and <a href="https://itsrito.com/">itsrito</a>. Self-hosted files live in this repo under <b>assets/fonts/</b>; everything else links to its canonical download page.</p>
+  </footer>
+
+</div>
+<script>
+  // A one-line pond ripple under the header. Decorative only.
+  (function () {
+    var el = document.getElementById('wave');
+    var W = 72, chars = ' .~≈~. ', t = 0;
+    function frame() {
+      var s = '';
+      for (var x = 0; x < W; x++) {
+        var v = Math.sin(x * 0.32 + t) + Math.sin(x * 0.11 - t * 0.7) + Math.sin(x * 0.53 + t * 1.7) * 0.5;
+        var i = Math.max(0, Math.min(chars.length - 1, Math.floor((v + 2.5) / 5 * chars.length)));
+        s += chars[i];
+      }
+      el.textContent = s;
+      t += 0.045;
+    }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      frame();
+    } else {
+      frame();
+      setInterval(function () { if (!document.hidden) frame(); }, 90);
+    }
+  })();
+  // One input previews every font at once.
+  (function () {
+    var input = document.getElementById('try');
+    var bigs = document.querySelectorAll('.pv.big');
+    var fallback = 'Cris & Tyler';
+    input.addEventListener('input', function () {
+      var text = input.value.trim() || fallback;
+      bigs.forEach(function (el) { el.textContent = text; });
+    });
+  })();
+</script>
+</body>
+</html>
