@@ -9,6 +9,7 @@ The type shelf for the whole estate: every font in use across Cristobal's sites,
 | Font | Role | Used on | License | Get it |
 | --- | --- | --- | --- | --- |
 | Alpha Lyrae Medium | Display | Vault, homepage, all collection galleries, itsrito | SIL OFL 1.1 | Hosted here: `assets/fonts/AlphaLyrae-Medium.woff2` / `.woff` · [Source](https://github.com/vegaprotocol/alpha-lyrae) |
+| Rito Block | Display | Born 2026-10-28 as the itsrito.com banner, now a real font | His own work | Hosted here: `assets/fonts/RitoBlock-Regular.ttf` / `.woff2` (A-Z, 0-9, basic punctuation; lowercase rides the caps) |
 | Cris Handwritten | Handwriting | Notebook portfolio template (cris-handwriting) | His own work | Hosted here: `assets/fonts/CrisHandwritten-Regular.ttf` / `.otf` (83 glyphs) |
 | Space Mono | UI & body | Vault, galleries, itsrito | SIL OFL 1.1 | [Google Fonts](https://fonts.google.com/specimen/Space+Mono) |
 | Figtree | Body | heycristobal.com homepage | SIL OFL 1.1 | [Google Fonts](https://fonts.google.com/specimen/Figtree) |
